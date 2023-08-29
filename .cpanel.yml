@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/asahorv1/public_html/laumasite/ghost_ai
+    - /bin/cp -R generate $DEPLOYPATH
+    - /bin/cp -R pwr-frontend $DEPLOYPATHpython -m venv env
+    - source env/bin/activate
+    - pip install -r requirements.txt
+    - python3 -m spacy download en_core_web_lg
+    - python3 api_server.py
