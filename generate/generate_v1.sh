@@ -28,4 +28,3 @@ python pytorch_src/generate_original.py --vocab ${model_dir}${vocab}.pkl \
 #--data ${data_dir}${cond_data} \
 #--out ${out_dir}${story_out}_${out_type} --print_cond_data --max_story_tokens 150
 
-

@@ -15,7 +15,6 @@
 import os
 import sys
 sys.path.append("../pytorch_src")
-
 import torch
 from interactive_generate import to_ints, generate, preprocess
 from utils import load_pickle, load_model, init_nlp_model

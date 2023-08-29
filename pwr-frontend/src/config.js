@@ -13,7 +13,7 @@ const params = {
   light_button_text: "Dark",
   font_button_text: "Font",
   story_temp_label: "Temp",
-  max_len_label: "L",
+  max_len_label: "Length",
   story_placeholder: "",
   save_button_text: "Save",
   clean_button_text: "purify",
