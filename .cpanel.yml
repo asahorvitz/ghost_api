@@ -1,10 +1,19 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/asahorv1/public_html/laumasite/ghost_ai
-    - /bin/cp -R generate $DEPLOYPATH
-    - /bin/cp -R pwr-frontend $DEPLOYPATHpython -m venv env
-    - source env/bin/activate
-    - pip install -r requirements.txt
-    - python3 -m spacy download en_core_web_lg
-    - python3 api_server.py
+    - export DEPLOYPATH=/home/isoqgdmy/public_html/asahorvitz.com/laumasite/ghost_api
+    - rm -rf $DEPLOYPATH
+    - mkdir $DEPLOYPATH
+    - /bin/cp -R models $DEPLOYPATH
+    - /bin/cp -R pytorch_src $DEPLOYPATH
+    - /bin/cp -R server $DEPLOYPATH
+    - /bin/cp requirements.txt $DEPLOYPATH
+    - cd $DEPLOYPATH
+    - TZ='Europe/London' date >> setup.log
+    - python3 -m venv env >> setup.log 2>&1
+    - source env/bin/activate >> setup.log 2>&1
+    - pip install -r requirements.txt >> setup.log 2>&1
+    - python3 -m spacy download en_core_web_lg >> setup.log 2>&1
+    - cd server
+    - TZ='Europe/London' date >> serve.log
+    - python3 api_server.py >> serve.log 2>&1

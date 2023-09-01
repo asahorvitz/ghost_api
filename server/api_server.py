@@ -130,7 +130,7 @@ def fileify(topic, story_temp, max_len, response, make_json):
     readable txt, or machine-readable json"""
     t = time.localtime()
     # uses time and date to ensure uniqueness of logfiles
-    filename = f"logs/{t.tm_year}_{t.tm_mon}_{t.tm_mday}_{t.tm_hour}_{t.tm_min}_{t.tm_sec}_story.{'json' if make_json else 'txt'}"
+    filename = f"../../ghost_logs/{t.tm_year}_{t.tm_mon}_{t.tm_mday}_{t.tm_hour}_{t.tm_min}_{t.tm_sec}_story.{'json' if make_json else 'txt'}"
     # create a log folder if none exists
     if not os.path.isdir('logs'):
         os.mkdir('logs')
