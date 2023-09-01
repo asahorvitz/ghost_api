@@ -10,6 +10,8 @@ deployment:
     - /bin/cp requirements.txt $DEPLOYPATH
     - cd $DEPLOYPATH
     - TZ='Europe/London' date >> setup.log
+    - echo Files in ./models--  >> setup.log
+    - ls -hl >> setup.log
     - python3 -m venv env >> setup.log 2>&1
     - source env/bin/activate >> setup.log 2>&1
     - pip install -r requirements.txt >> setup.log 2>&1
