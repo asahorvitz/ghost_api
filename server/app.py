@@ -15,8 +15,8 @@ from flask_classful import FlaskView, route
 
 import time, os
 import json
-
-import system1_sampling as system1
+print(os.getcwd())
+from . import system1_sampling as system1
 
 app=Flask(__name__)
 CORS(app) # Make the browser happier about cross-domain references.

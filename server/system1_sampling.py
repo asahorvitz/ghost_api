@@ -19,7 +19,7 @@ import torch
 from interactive_generate import to_ints, generate, preprocess
 from utils import load_pickle, load_model, init_nlp_model
 
-import system_template
+from . import system_template
 
 SPECIAL_CHARACTERS = {"<EOL>", "<eos>", "#", "<EOT>", "</s>", "<P>"}
 
